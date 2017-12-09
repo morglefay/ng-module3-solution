@@ -1,0 +1,8 @@
+<h3 ng-if="menuCtrl.items.length>0">Menu Items:</h3>
+<ol>
+  <li ng-repeat="item in menuCtrl.items">
+    {{item.name}}, {{item.short_name}}, {{item.description}}
+    <button ng-click="menuCtrl.onRemove({index:$index});">Don't want this one!</button>
+  </li>
+</ol>
+<div class="error" ng-if="menuCtrl.items.length==0">Nothing Found</div>
